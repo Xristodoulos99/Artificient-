@@ -15,6 +15,10 @@
     --textColor: #eee;
 }
 
+
+/*
+Navbar
+*/
 header {
 	display: flex;
 	align-items: center;
@@ -71,8 +75,11 @@ nav {
 body
 */
 
+
+
 body{
 	background-color: #111;
+  
 	min-height: 900px;
 	display: flex;
 	flex-direction: column;
@@ -94,15 +101,16 @@ body{
 }
 
 .main-text h1{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: relative;
     top:10%; 
     height: 20%;
     text-align: center;
     font-size: 5em;
-  font-weight: 500;
-  color: black;
-  line-height: 1em;
-  font-family: 'Gajraj One', cursive;
+    font-weight: 500;
+    line-height: 1em;
+    font-family: 'Gajraj One', cursive;
 
 }
 
@@ -115,52 +123,43 @@ body{
     height: 65%;
     text-align: left;
     font-size: 2em;
-  font-weight:100;
-  color: white;
-  line-height: 1em;
-  font-family: "Times New Roman", Times, serif;
+    font-weight:100;
+    color: white;
+    line-height: 1em;
+    font-family: "Times New Roman", Times, serif;
 
 }
 
 
 .goal
 {
+  
     width: 100%;
     height: 800px;
     top: 1000px;
-  position: absolute;
-  min-height:800px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  transition: 0.5s;
+    position: absolute;
+    min-height:800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: -webkit-radial-gradient(black,#262525);
+    transition: 0.5s;
 }
-.goal.active
-{
-  right: 300px;
-}
+
 
 .goal video
 {
+  margin-top: 4%;
+  margin-bottom: 4%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 92%;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.9;
 }
-.overlay1
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:gray;
-  mix-blend-mode: overlay;
-}
+
 .information
 {
   position:absolute;
@@ -179,6 +178,10 @@ text-align: right;
   line-height: 1em;
   text-transform: uppercase;
 }
+
+/*
+h3 for future additional text
+*/
 .information h3
 {
     text-align: right;
@@ -188,17 +191,20 @@ text-align: right;
   line-height: 1em;
   text-transform: uppercase;
 }
+
+
 .information p
 {
     position: absolute;
     height: 70%;
     width: 80%;
-  font-size: 1.1em;
-  color: #fff;
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
+    font-size: 1.1em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
 }
+
 .information a
 {
     text-align: center;
@@ -206,15 +212,15 @@ text-align: right;
     width: 40%;
     left: 10%;
     top:50%;
-  display: inline-block;
-  font-size: 1em;
-  padding: 20px 40px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  color: black;
-  letter-spacing: 2px;
-  transition: 0.2s;
+    display: inline-block;
+    font-size: 1em;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 2px;
+    transition: 0.2s;
     background-color: white;
     opacity: 0.5;
 }
@@ -223,25 +229,29 @@ text-align: right;
   letter-spacing: 6px;
 }
 
+/* 
+Footer
+*/
+
 footer{
 	flex-shrink: 0;
 }
 
 .footer ul {
 	
-	margin: 0;
-     padding: 3px 0;
-     list-style: none;
-	 z-index: 1;
-	 margin-top:750px;
+	  margin: 0;
+    padding: 3px 0;
+    list-style: none;
+    z-index: 1;
+    margin-top:750px;
 }
 
 .footer a {
-	float: left;
+	  float: left;
    	display: block;
-     color: #FFF;
-     padding: 0px;
-     text-decoration: none;
+    color: #FFF;
+    padding: 0px;
+    text-decoration: none;
 }
 
 .footer a:visited { text-decoration: none; color:white; }
@@ -267,32 +277,7 @@ footer{
 /*
 responsiveness
 */
-@media only screen and (max-width:800px){
-    
-    .main-text h1{
-    font-size: 2.5em;
-}
-    
-    .main-text h2{
-    font-size: 1.5em;
-}
-    .goal h2
-{
-  font-size: 3em;
-}
-    
-    
-    .goal a
-    {
-	margin-top: 50%;
-    font-size: 0.6em;
-    letter-spacing: 1px;
-}
-    .goal a:hover
-{
-  letter-spacing: 3px;
-}
-}
+
  
 
 @media only screen and (max-width: 1024px) {
@@ -332,6 +317,35 @@ responsiveness
 	nav a {
 		font-size: 2rem;
 	}
+}
+
+
+
+@media only screen and (max-width:800px){
+    
+  .main-text h1{
+  font-size: 2.5em;
+}
+  
+  .main-text h2{
+  font-size: 1.5em;
+}
+  .goal h2
+{
+font-size: 3em;
+}
+  
+  
+  .goal a
+{
+margin-top: 50%;
+font-size: 0.6em;
+letter-spacing: 1px;
+}
+  .goal a:hover
+{
+letter-spacing: 3px;
+}
 }
 
 @media only screen and (max-height: 500px) {
